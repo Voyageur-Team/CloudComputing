@@ -4,53 +4,50 @@
 
 ## 🚀 Capstone Project: Simplifying Group Trip Planning
 
-Voyageur is a mobile application designed to streamline the process of group trip planning. By integrating advanced cloud computing solutions, the app offers real-time collaboration, robust backend infrastructure, and secure data management for a seamless user experience.
+Voyageur is a mobile application designed to simplify group trip planning through advanced cloud computing solutions. This includes real-time collaboration, secure data management, and robust backend infrastructure.
 
 ---
 
-## 🌐 Cloud Computing Overview
+## 🌐 Cloud Computing Architecture
 
-### 🔧 Technologies Used:
-1. **Google Cloud Platform (GCP)**:
-   - **Cloud Run**: For deploying serverless backend services.
-   - **Cloud Storage**: For storing trip-related data like itineraries, user profiles, and multimedia files.
-   - **Firestore (NoSQL Database)**: To handle real-time database operations and synchronization across devices.
-   - **API Gateway**: For secure communication between the mobile app and backend services.
-   - **Cloud Functions**: For executing event-driven workflows, such as notifications and expense calculations.
+### 🔧 Key Components:
+1. **Service Layer**:
+   - **Node.js + Express**: Backend APIs for processing requests.
+   - **Model Integration**: Machine learning models for personalized recommendations.
 
-2. **Third-party APIs**:
-   - **Google Maps API**: For integrating location services, route planning, and trip visualization.
-   - **Tourist Destination API**: To fetch popular destinations and activities dynamically.
+2. **Deployment Pipeline**:
+   - **Artifact Registry**: Stores containerized applications.
+   - **Cloud Build**: Automates the CI/CD process for deployments.
+   - **Cloud Run**: Serverless infrastructure for backend services.
 
-### 💡 Cloud Architecture
-- **Frontend**: Mobile app built in Kotlin (native Android).
-- **Backend**: Deployed as serverless microservices on Cloud Run, interfacing with Firestore for real-time data operations.
-- **Data Management**: Cloud Storage for media uploads and Firestore for trip data.
-- **CI/CD**: Integrated pipelines using Cloud Build for automated deployments.
+3. **Data Storage**:
+   - **Firestore**: NoSQL database for real-time data synchronization.
+   - **Cloud Storage**: Media and file storage for user uploads.
 
 ---
 
-## 🛠 Features Powered by Cloud Computing
+## 🛠 Features Powered by GCP
 
-### ✅ **Real-Time Collaboration**
-- Firestore's real-time sync allows group members to view and edit trip plans simultaneously without conflicts.
+1. **Real-Time Collaboration**:  
+   Firestore enables seamless synchronization across devices.
 
-### ✅ **Voting and Polls**
-- Cloud Functions ensure automated counting and validation of votes for destinations and activities.
+2. **Automated CI/CD**:  
+   Using **Artifact Registry** and **Cloud Build**, every deployment is fast, secure, and efficient.
 
-### ✅ **Expense Management**
-- Secure calculations and history storage handled via Firestore and event-driven Cloud Functions.
+3. **Secure Data Handling**:  
+   Backend APIs deployed on **Cloud Run** ensure scalability and reliability.
 
-### ✅ **Personalized Recommendations**
-- Integrated machine learning models deployed on GCP recommend activities and destinations based on user preferences.
-
----
-
-## 📈 Benefits of Using GCP
-
-- **Scalability**: Serverless architecture adapts to increasing user demands.
-- **Cost-Effectiveness**: Pay-per-use model reduces unnecessary infrastructure costs.
-- **Security**: Built-in GCP services ensure secure data transmission and storage.
-- **Speed**: Cloud-native tools enable faster development and deployment cycles.
+4. **Machine Learning**:  
+   Integrated models recommend destinations and activities based on user preferences.
 
 ---
+
+## 🗂 Folder Structure
+
+```plaintext
+root/
+├── android/              # Mobile App Source Code
+├── cloud-functions/      # Event-driven Cloud Functions
+├── backend/              # APIs using Cloud Run
+├── cloud-computing-architecture.png  # Cloud Computing Diagram
+└── README.md             # Project Documentation

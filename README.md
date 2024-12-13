@@ -46,8 +46,32 @@ Voyageur is a mobile application designed to simplify group trip planning throug
 
 ```plaintext
 root/
-├── android/              # Mobile App Source Code
-├── cloud-functions/      # Event-driven Cloud Functions
-├── backend/              # APIs using Cloud Run
-├── cloud-computing-architecture.png  # Cloud Computing Diagram
-└── README.md             # Project Documentation
+├── config/               # Database configuration
+│   └── db.js             # Database connection setup
+├── controllers/          # Backend controllers for API logic
+│   ├── authController.js # Handles user authentication
+│   ├── cityController.js # Handles city-related API requests
+│   ├── placesController.js # Manages place-related operations
+│   ├── preferencesController.js # Handles user preferences
+│   ├── recommendationController.js # Provides recommendations
+│   ├── tripController.js # Manages trip planning features
+│   └── userController.js # Handles user-related operations
+├── middleware/           # Middlewares for request validation and processing
+│   └── authMiddleware.js # Authentication middleware
+├── routes/               # Route definitions for the APIs
+│   ├── authRoutes.js     # Authentication routes
+│   ├── cityRoutes.js     # City-related routes
+│   ├── placesRoutes.js   # Place-related routes
+│   ├── preferencesRoutes.js # Preferences-related routes
+│   ├── recommendationRoutes.js # Recommendation routes
+│   ├── tripRoutes.js     # Trip-related routes
+│   └── userRoutes.js     # User-related routes
+├── utils/                # Utility functions and scripts
+│   └── process_dataset.js # Dataset processing logic
+├── .env                  # Environment variables
+├── app.js                # Main application entry point
+├── Dockerfile            # Docker configuration
+├── package-lock.json     # Locked dependencies
+├── package.json          # Node.js dependencies and scripts
+└── README.md             # Project documentation
+
